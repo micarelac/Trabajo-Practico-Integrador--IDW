@@ -3,73 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IDW S.A. - Salones de fiestas infantiles </title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
     <!--Navbar-->
-    <nav class="navbar">
-        <div class="logo">IDW S.A</div>
+        <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <img src="imagenes/Logo-idw.png" alt="Logo IDW S.A." width="100px">
+            </a>
         <ul class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="catering.html">Catering</a>
-            <a href="conocenos.html">Conocenos</a>
-            <a href="contacto.html">Contacto</a>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="eventos.html">Salones de Eventos</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="institucional.html">Conocenos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <!--Portada-->
-    <header class="portada">
-    <img src="imagenes/Salon 1.jpg" alt="Salón de eventos" class="portada-img" width="1300">
-    <div class="portada-content">
-      <h1> IDW S.A - Salones de Eventos</h1>
+    <section class="portada">
+    <img src="imagenes/portada.png" alt="Salón de eventos" class="portada-img" width="1300">
+    <div class="contenido-portada">
+      <h1> ¡Encontra el lugar ideal para celebrar momentos inolvidables!</h1>
       <p>Tu próximo evento empieza acá</p>
       <a href="#" class="btn-presupuesto">Pedí tu presupuesto</a>
     </div>
-    </header>
-
-    <!--Bienvenida-->
-    <section class="bienvenida" id="conocenos">
-        <h2>Bienvenidos</h2>
-        <p> <br>Somos una empresa dedicada a la creación y gestión de eventos de tipo social y empresarial. <br/>
-            Salones equipados para fiestas, casamientos, cumpleaños y mucho más. Espacios cómodos, modernos y adaptables para cada ocasión.</p>
     </section>
 
-    <!--Galería de eventos-->
-    <section class="galeria-eventos" id="eventos">
-        <h3>Galería de Eventos</h3>
-        <div class="galeria-img">
-            <div class="cumpleaños15">
-            <img src="imagenes/Salon 3.jpg" alt="cumpleaños de 15" width="1300">
-            <p>Cumpleaños de 15</p>
+    <!--Bienvenida-->
+    <header class="bienvenida" id="conocenos">
+        <h2>¡Bienvenidos!</h2>
+        <p> <br>Somos una empresa dedicada a ayudarte a encontrar el salon y el servicio de catering ideal para la celebración de tu peque. <br/>
+            Explorá nuestro catálogo, compará opciones y planificá la fiesta perfecta. <br>¡Todo en un solo lugar, de forma fácil y rápida!</p><br/></p>
+    </header>
+
+    <!--Seccion Salones de eventos-->
+    <section class="seccion" id="salones">
+        <img src="imagenes/salon escalada.jpg" alt="salones para fiestas">
+        <div class="contenido-salones">
+            <h2>Conocé nuestro catálogo de salones</h2>
+            <p>Encontrá casas de cumpleaños adaptadas por edad, con opciones temáticas y servicios especiales para cada etapa de la infancia.</p>
+            <a href="eventos.html" class="boton">Ver Salones</a>
             </div>
-            <div class="casamientos">
-            <img src="imagenes/salon exterior.jpg" alt="casamiento exterior" width="1300">
-            <p>Casamiento en el exterior</p>
-            </div>
-            <div class="empresarial">
-            <img src="imagenes/exterior 2.jpg" alt="Exterior empresarial" width="1300">
-            <p>Fiestas empresariales</p>
-            </div>
-            <div class="casamiento">
-            <img src="imagenes/salon 2.jpg" alt="casamiento interior" width="1300">
-            <p>Casamiento en el interior</p>
-            </div>
+    </section>
+
+    <!-- Seccion Catering-->
+    <section class="catering" id="catering">
+        <img src="imagenes/entrada.png" alt="catering para fiestas">
+        <div class="contenido-catering">
+        <h2>Servicio de Catering</h2>
+        <p> <br>Menús para todas las edades: saludables, divertidos y adaptados a alergias alimentarias.</p>
+        <a href="#" class="boton">Conoce las opciones</a>
         </div>
     </section>
 
-    <!--Catering-->
-    <section class="catering" id="catering">
-        <h3>Servicio de Catering</h3>
-        <p> <br>Ofrecemos opciones personalizadas de catering para cada tipo de evento.<br/> Menús adaptables, propuestas veganas y atención profesional.</p>
-    </section>
+    <!-- Seccion insitucional -->
+     <section id="institucional" class="seccion-institucional">
+        <div class="contenido-institucional">
+            <h2>¡Conocenos!</h2>
+            <p><br>Somos IDW S.A., especialistas en eventos para los más chicos.<br/>Llevamos más de 10 años ayudando a las familias a encontrar el salón ideal para festejar cumpleaños infantiles inolvidables. <br>Desde espacios con peloteros hasta salones temáticos con shows y actividades personalizadas, ofrecemos un catálogo completo para que puedas comparar, elegir y reservar fácilmente el lugar perfecto para tu evento.<br/></p>
+        </div>
+     </section>
 
     <!--Contacto-->
     <section class="contacto" id="contacto">
         <h3>Contacto</h3>
-        <p> <br>Si tienes alguna consulta o necesitas más información, no dudes en contactar con nosotros.<br/>
-            <a href="mailto:contacto@idws.com">contacto@idws.com</a></p>
+        <form>
+            <label>
+              <span>Nombre</span>
+              <input type="text" name="nombre" required />
+            </label>
+    
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+    
+            <label>
+              <span>Teléfono</span>
+              <input type="tel" name="telefono" />
+            </label>
+    
+            <label>
+              <span>Mensaje</span>
+              <textarea name="mensaje" required></textarea>
+            </label>
+    
+            <button type="submit">Enviar</button>
+          </form>
     </section>
 
     <!--Footer-->
