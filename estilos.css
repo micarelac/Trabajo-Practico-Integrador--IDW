@@ -1,0 +1,24 @@
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav {
+    ul {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}
+
+section {
+  margin-block: 6rem;
+}
