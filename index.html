@@ -5,60 +5,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IDW S.A. - Salones de fiestas infantiles</title>
+    <link rel="icon" href="src/imagenes/Logo-idw.png" type="image/png" />
+
     <link rel="stylesheet" href="src/styles/estilos.css" />
-    <link rel="icon" href="imagenes/Logo-idw.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
 </head>
 
 <body>
     <!--Header-->
     <div id="header-placeholder"></div>
 
-    <main>
+
+
+    <main class="bg-light p-3 d-flex flex-column align-items-start" style="background-color: #FFFDF6;">
         <!--Portada-->
-        <section class="portada">
-            <img src="imagenes/portada.png" alt="Salón de eventos" class="portada-img" />
-            <div class="contenido-portada">
-                <h1>¡Encontra el lugar ideal para celebrar momentos inolvidables!</h1>
-                <p>Tu próximo evento empieza acá</p>
-                <a href="#" class="btn-presupuesto">Pedí tu presupuesto</a>
+        <section class="d-flex w-full  position-relative justify-content-center align-items-center mb-4 "
+        style="background-image: url('src/imagenes/portada.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;">            
+            <!-- <img src="src/imagenes/portada.png" alt="Salón de eventos" class=" w-100 portada-img rounded-3"> -->
+            <div class="d-flex w-full">
+                <div class="position-absolute top-50 start-50 translate-middle text-white px-3 bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h1 class="fs-3 fs-md-1 fw-bold">
+                        ¡Encontrá el lugar ideal para celebrar momentos inolvidables!
+                    </h1>
+                    <p class="fs-5">Tu próximo evento empieza acá</p>
+                    <a href="#" class="btn mt-2 text-white" style="background-color: #ff6f61;">Pedí tu presupuesto</a>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="portada position-relative text-center ">
+            <!-- Imagen de fondo -->
+            <img src="src/imagenes/portada.png" alt="Salón de eventos" class="img-fluid w-100 portada-img rounded-3"
+                style="object-fit: cover; height: auto; max-height: 80vh;" />
+
+            <!-- Contenido superpuesto -->
+            <div
+                class="position-absolute top-50 start-50 translate-middle text-white px-3 bg-dark bg-opacity-50 rounded-3 p-3">
+                <h1 class="fs-3 fs-md-1 fw-bold">
+                    ¡Encontrá el lugar ideal para celebrar momentos inolvidables!
+                </h1>
+                <p class="fs-5">Tu próximo evento empieza acá</p>
+                <a href="#" class="btn mt-2 text-white" style="background-color: #ff6f61;">Pedí tu presupuesto</a>
             </div>
         </section>
 
         <!--Bienvenida-->
-        <section class="bienvenida" id="conocenos">
-            <h2>¡Bienvenidos!</h2>
-            <p>
-                <br />Somos una empresa dedicada a ayudarte a encontrar el salon y el
-                servicio de catering ideal para la celebración de tu peque. <br />
-                Explorá nuestro catálogo, compará opciones y planificá la fiesta
-                perfecta. <br />¡Todo en un solo lugar, de forma fácil y rápida!<br />
-            </p>
+        <section id="conocenos" class="text-center py-5 px-3 rounded-3" style="background-color: #9ca9f0; margin-block: 60px;">
+            <div class="container">
+                <h2 class="display-4 fw-bold mb-4">¡Bienvenidos!</h2>
+                <p class="mx-auto fs-5" style="max-width: 800px;">
+                    <br>Somos una empresa dedicada a ayudarte a encontrar el salón y el
+                    servicio de catering ideal para la celebración de tu peque.<br>
+                    Explorá nuestro catálogo, compará opciones y planificá la fiesta
+                    perfecta.<br>¡Todo en un solo lugar, de forma fácil y rápida!<br>
+                </p>
+            </div>
         </section>
 
         <!--Seccion Salones de eventos-->
-        <section class="seccion" id="salones">
-            <img src="imagenes/salon escalada.jpg" alt="salones para fiestas" />
-            <div class="contenido-salones">
-                <h2>Conocé nuestro catálogo de salones</h2>
-                <p>
-                    Encontrá casas de cumpleaños adaptadas por edad, con opciones
-                    temáticas y servicios especiales para cada etapa de la infancia.
-                </p>
-                <a href="eventos.html" class="boton">Ver Salones</a>
+        <section id="salones" class="py-5 rounded-3 " style="background-color: #f0e9c4;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Imagen -->
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="src/imagenes/salon escalada.jpg" alt="salones para fiestas"
+                            class="img-fluid rounded shadow" />
+                    </div>
+
+                    <!-- Contenido -->
+                    <div class="col-md-6 text-center text-md-start">
+                        <h2 class="fw-bold mb-3">Conocé nuestro catálogo de salones</h2>
+                        <p class="fs-5 mb-4">
+                            Encontrá casas de cumpleaños adaptadas por edad, con opciones
+                            temáticas y servicios especiales para cada etapa de la infancia.
+                        </p>
+                        <a href="eventos.html" class="btn text-white" style="background-color: #ff6f61;">Ver Salones</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Seccion Catering-->
-        <section class="catering" id="catering">
-            <img src="imagenes/entrada.png" alt="catering para fiestas" />
-            <div class="contenido-catering">
-                <h2>Servicio de Catering</h2>
-                <p>
-                    Menús para todas las edades: saludables, divertidos y adaptados a
-                    alergias alimentarias.
-                </p>
-                <a href="/catering.html" class="boton">Conoce las opciones</a>
-            </div>
+        <section id="catering" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Contenido -->
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="src/imagenes/entrada.png" alt="catering para fiestas"
+                            class="img-fluid rounded shadow" />
+                    </div>
+                    <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                        <h2 class="fw-bold mb-3">Servicio de Catering</h2>
+                        <p class="fs-5 mb-4">
+                            Menús para todas las edades: saludables, divertidos y adaptados a
+                            alergias alimentarias.</p>
+                            <a href="catering.html" class="btn text-white" style="background-color: #ff6f61;">Ver Catering</a>
+                    </div>
+                </div>
         </section>
 
         <!-- Seccion insitucional -->
@@ -112,7 +161,11 @@
 
     <!--Footer-->
     <div id="footer"></div>
+
+    <script src="src/scripts/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
 </body>
-<script src="src/scripts/main.js" defer></script>
 
 </html>
