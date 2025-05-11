@@ -6,6 +6,10 @@ Rodriguez Adan
 
 
 
-para correr el programa ejecute el siguiente comando 
+para re compilar bootstrap5.0.2 ejecute el siguiente comando 
 
 npm install --save-dev npm-run-all
+
+npm run dist
+
+NOTA: necesita tener Node.js
