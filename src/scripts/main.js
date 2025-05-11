@@ -64,9 +64,9 @@ const salonesIniciales = [
 ];
 
 
-if (!localStorage.getItem("salones")) {
-    localStorage.setItem("salones", JSON.stringify(salonesIniciales));
-}
+// if (!localStorage.getItem("salones")) {
+//     localStorage.setItem("salones", JSON.stringify(salonesIniciales));
+// }
 
 /* 
 Esta función se encarga de cargar los salones en el contenedor correspondiente
@@ -99,4 +99,4 @@ function cargarSalones() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", cargarSalones);
+// document.addEventListener("DOMContentLoaded", cargarSalones);
