@@ -70,7 +70,7 @@ $colors: (
 $primary:       $teal !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          #118AB2 !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         #ffd166 !default;
@@ -1371,7 +1371,7 @@ $breadcrumb-border-radius:          null !default;
 // Carousel
 
 // scss-docs-start carousel-variables
-$carousel-control-color:             $red !default;
+$carousel-control-color:             $white !default;
 $carousel-control-width:             15% !default;
 $carousel-control-opacity:           .5 !default;
 $carousel-control-hover-opacity:     .9 !default;
@@ -1382,12 +1382,12 @@ $carousel-indicator-height:          3px !default;
 $carousel-indicator-hit-area-height: 10px !default;
 $carousel-indicator-spacer:          3px !default;
 $carousel-indicator-opacity:         .5 !default;
-$carousel-indicator-active-bg:       $gray !default;
+$carousel-indicator-active-bg:       $secondary !default; /*esta variable controla el color del indicador activo*/
 $carousel-indicator-active-opacity:  1 !default;
 $carousel-indicator-transition:      opacity .6s ease !default;
 
 $carousel-caption-width:             70% !default;
-$carousel-caption-color:             $yellow !default;
+$carousel-caption-color:             $white !default; /*esta variable controlan el color del texto de los carousel*/
 $carousel-caption-padding-y:         1.25rem !default;
 $carousel-caption-spacer:            1.25rem !default;
 

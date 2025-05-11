@@ -16,10 +16,38 @@
   <!--Header-->
   <div id="header-placeholder"></div>
 
-  <main>
+  <main class="container min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="container-sm" style="max-width: 720px;">
+  <!-- <div class="container-sm"> -->
+    <div class="m-4 p-4 shadow rounded-3">
+      <h2 class="text-center text-info mb-4">Contacto</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" class="form-control" id="telefono">
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="3"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <!-- 
     <section id="contacto">
       <div class="contacto">
-
         <h2>Contacto</h2>
         <form>
           <label>
@@ -46,7 +74,9 @@
           </div>
         </form>
       </div>
-    </section>
+    </section> -->
+
+
   </main>
 
   <!--Footer-->
