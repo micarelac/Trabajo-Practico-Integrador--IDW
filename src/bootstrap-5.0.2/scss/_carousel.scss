@@ -30,10 +30,15 @@
   position: relative;
   display: none;
   float: left;
+  height: 370px;
   width: 100%;
   margin-right: -100%;
   backface-visibility: hidden;
   @include transition($carousel-transition);
+  img{
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .carousel-item.active,
