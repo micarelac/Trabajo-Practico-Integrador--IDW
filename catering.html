@@ -5,32 +5,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IDW S.A. - Salones de fiestas infantiles</title>
-  <link rel="stylesheet" href="estilos.css" />
   <link rel="icon" href="imagenes/Logo-idw.png" type="image/png" />
+
+  <link rel="stylesheet" href="src/styles/estilos.css" />
+  <link rel="stylesheet" href="src/bootstrap-5.0.2/dist/css/bootstrap.min.css" />
+
 </head>
 
-<body>
+<body class="bg-body">
   <!--Header-->
   <div id="header-placeholder"></div>
 
-  <main>
+  <main class="d-block justify-content-center px-3 m-1">
     <!--Bienvenida-->
-    <section class="bienvenida" id="catering">
-      <h2>Catering</h2>
-      <p>
-        La planificación de un catering para eventos suele incluir la participación de un coordinador encargado de supervisar toda la logística, así como también mozos, equipo de cocina y personal responsable del montaje del servicio.
-      </p>
+    <section id="conocenos" class="bg-danger text-center shadow mt-4 py-5 px-3 rounded-3">
+      <div class="container">
+        <h2 class="display-2 fw-bold">Catering</h2>
+        <p class="mx-auto fs-5">
+          La planificación de un catering para eventos suele incluir la participación de un coordinador encargado de
+          supervisar toda la logística, así como también mozos, equipo de cocina y personal responsable del montaje
+          del
+          servicio.
+        </p>
+      </div>
     </section>
 
+    <hr class="bg-dark my-4 mt-5" />
+
+
     <!-- Menús -->
-    <section id="catalogo-salones">
+    <section id="catalogo-salones" class="text-info">
 
       <!-- Salon 1 -->
       <div class="salones">
         <h3>Piccolino Eventos</h3>
         <div class="salon">
           <div>
-            <img src="imagenes/Catering-Piccolino-Eventos.jpg" alt="Piedra Libre" />
+            <img src="src/imagenes/Catering-Piccolino-Eventos.jpg" alt="Piedra Libre" />
           </div>
           <div>
             <p>
@@ -47,12 +58,15 @@
         </div>
       </div>
 
+      <hr class="bg-dark mx-5 my-4" />
+
+
       <!-- Salon 2 -->
       <div class="salones">
         <h3>Tutto Speciale Catering</h3>
         <div class="salon">
           <div>
-            <img src="imagenes/tutto-speciale-catering.png" alt="Cachetes Felices" />
+            <img src="src/imagenes/tutto-speciale-catering.png" alt="Cachetes Felices" />
           </div>
           <div>
             <p>
@@ -69,12 +83,14 @@
         </div>
       </div>
 
+      <hr class="bg-dark mx-5 my-4" />
+
       <!-- Salon 3 -->
       <div class="salones">
         <h3>Aire Catering</h3>
         <div class="salon">
           <div>
-            <img src="imagenes/Catering-para-eventos-sociales-Aire-Catering.jpg" alt="Garden Park" />
+            <img src="src/imagenes/Catering-para-eventos-sociales-Aire-Catering.jpg" alt="Garden Park" />
           </div>
           <div>
             <p>
@@ -96,10 +112,11 @@
   </main>
 
   <!--Footer-->
-  <footer>
-    <p>&copy; 2025 IDW S.A. - Todos los derechos reservados</p>
-  </footer>
+  <div id="footer"></div>
+
+  <script src="src/scripts/main.js" defer></script>
+  <script src="src/bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="src/bootstrap-5.0.2/dist/js/bootstrap.min.js" defer></script>
 </body>
-<script src="script.js" defer></script>
 
 </html>

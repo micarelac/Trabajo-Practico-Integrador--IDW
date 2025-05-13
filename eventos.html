@@ -5,20 +5,374 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IDW S.A. - Salones de fiestas infantiles</title>
-  <link rel="stylesheet" href="src/styles/estilos.css" />
   <link rel="icon" href="scr/imagenes/Logo-idw.png" type="image/png" />
+
+  <link rel="stylesheet" href="src/styles/estilos.css" />
+  <link rel="stylesheet" href="src/bootstrap-5.0.2/dist/css/bootstrap.min.css" />
+
 </head>
 
-<body>
+<body class="bg-body">
   <!--Header-->
   <div id="header-placeholder"></div>
-  <section id="catalogo-salones">
-    <h2>Catálogo de Salones</h2> <!-- el LocalStorage usara esto para ubicar dinamicamente los salones que se tiene almacenado -->
-  </section>
+  <main class="d-block justify-content-center px-3 m-1">
+
+    <h2 class="text-center mb-4">Salones disponibles</h2>
+    <section id="catalogo-salones" class="text-info">
+      <hr class="bg-dark my-4 mt-5" />
+
+      <div class="salones">
+
+        <!--SALON PIEDRA LIBRE-->
+        
+        <h3>Piedra Libre Eventos</h3>
+        <div class="salon">
+          <div>
+            <img src="src/imagenes/piedra-libre-1.jpg" alt="Piedra Libre Eventos" class="img-fluid rounded" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalPiedraLibre" />
+          </div>
+          <div>
+            <p><strong>Descripción:</strong> Salón para fiestas infantiles</p>
+            <p><strong>Dirección:</strong> Pascual Palma 857, Paraná - Entre Ríos</p>
+            <p><strong>Contacto:</strong> <a href="https://wa.me/543435194040" target="_blank">Whatsapp</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--CARRUSEL PIEDRA LIBRE, FALTA QUE LA FOTO NO SE ADAPTE AL TAMAÑO DEL CONTENEDOR,
+      QUE MANTENGA SU TAMAÑO ASI NO SE PIXELEA-->
+
+   <div class="modal fade" id="modalPiedraLibre" tabindex="-1" aria-labelledby="modalPiedraLibreLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalPiedraLibreLabel">Piedra Libre Eventos</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div id="carouselPiedraLibre" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="src/imagenes/piedra-libre-1.jpg" class="d-block w-100" alt="Piedra Libre 1">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/piedra-libre-2.jpg" class="d-block w-100" alt="Piedra Libre 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/piedra-libre-3.jpg" class="d-block w-100" alt="Piedra Libre 3">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/piedra-libre-4.jpg" class="d-block w-100" alt="Piedra Libre 4">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPiedraLibre" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselPiedraLibre" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <hr class="bg-dark mx-5 my-4" />
+      
+<!--SALON CACHETES-->
+
+      <div class="salones">
+        <h3>Cachetes Felices</h3>
+        <div class="salon">
+          <div>
+            <img src="src/imagenes/Cachetes-felices-4.jpg" alt="Cachetes Felices" class="img-fluid rounded" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCachetesFelices" />
+          </div>
+          <div>
+            <p><strong>Descripción:</strong> Salón para fiestas infantiles</p>
+            <p><strong>Dirección:</strong> Av. Francisco Ramirez 5080, Paraná - Entre Ríos</p>
+            <p><strong>Contacto:</strong> <a href="https://wa.me/543435728358" target="_blank">Whatsapp</a></p>
+          </div>
+        </div>
+      </div>
+
+<!--CARRUSEL CACHETES, FALTA QUE LA FOTO NO SE ADAPTE AL TAMAÑO DEL CONTENEDOR,
+      QUE MANTENGA SU TAMAÑO ASI NO SE PIXELEA-->
+
+       <div class="modal fade" id="modalCachetesFelices" tabindex="-1" aria-labelledby="modalCachetesFelicesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalCachetesFelicesLabel">Cachetes Felices</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div id="carouselCachetesFelices" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="src/imagenes/cachetes-felices-1.jpg" class="d-block w-100" alt="Cachetes Felices 1">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/cachetes-felices-2.jpg" class="d-block w-100" alt="Cachetes Felices 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/cachetes-felices-3.jpg" class="d-block w-100" alt="Cachetes Felices 3">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/Cachetes-felices-4.jpg" class="d-block w-100" alt="Cachetes Felices 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselCachetesFelices" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselCachetesFelices" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <hr class="bg-dark mx-5 my-4" />
+
+<!--SALON GARDEN PARK-->
+
+      <div class="salones">
+        <h3>Garden Park</h3>
+        <div class="salon">
+          <div>
+            <img src="src/imagenes/garden-park-1.jpg" alt="Garden Park" class="img-fluid rounded" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalGardenPark" />
+          </div>
+          <div>
+            <p><strong>Descripción:</strong> Salón para fiestas infantiles</p>
+            <p><strong>Dirección:</strong> Courreges 345, Paraná - Entre Ríos</p>
+            <p><strong>Contacto:</strong> <a href="https://wa.me/543434402888" target="_blank">Whatsapp</a></p>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-dark mx-5 my-4" />
+
+
+<!--CARRUSEL GARDEN, FALTA QUE LA FOTO NO SE ADAPTE AL TAMAÑO DEL CONTENEDOR,
+      QUE MANTENGA SU TAMAÑO ASI NO SE PIXELEA-->
+
+      <div class="modal fade" id="modalGardenPark" tabindex="-1" aria-labelledby="modalGardenParkLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalGardenParkLabel">Garden Park</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div id="carouselGardenPark" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="src/imagenes/garden-park-4.jpg" class="d-block w-100" alt="Garden Park 1">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/garden-park-2.jpg" class="d-block w-100" alt="Garden Park 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/garden-park-3.jpg" class="d-block w-100" alt="Garden Park 3">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/garden-park-5.jpg" class="d-block w-100" alt="Garden Park 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselGardenPark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselGardenPark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--SALON SAFARI-->
+
+      <div class="salones">
+        <h3>Safari Eventos</h3>
+        <div class="salon">
+          <div>
+            <img src="src/imagenes/safari-1.jpg" alt="Safari Eventos" class="img-fluid rounded" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalSafariEventos" />
+          </div>
+          <div>
+            <p><strong>Descripción:</strong> Salón para fiestas infantiles</p>
+            <p><strong>Dirección:</strong> Cervantes 273, Paraná - Entre Ríos</p>
+            <p><strong>Contacto:</strong> <a href="https://wa.me/543435161859" target="_blank">Whatsapp</a></p>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-dark mx-5 my-4" />
+
+      <!--CARRUSEL SAFARI, FALTA QUE LA FOTO NO SE ADAPTE AL TAMAÑO DEL CONTENEDOR,
+      QUE MANTENGA SU TAMAÑO ASI NO SE PIXELEA-->
+
+<div class="modal fade" id="modalSafariEventos" tabindex="-1" aria-labelledby="modalSafariEventosLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalSafariEventosLabel">Safari Eventos</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div id="carouselSafariEventos" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="src/imagenes/safari-2.jpg" class="d-block w-100" alt="Safari Eventos 1">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/safari-3.jpg" class="d-block w-100" alt="Safari Eventos 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/safari-4.jpg" class="d-block w-100" alt="Safari Eventos 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/safari-5.jpg" class="d-block w-100" alt="Safari Eventos 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSafariEventos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselSafariEventos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!--SALON CIUDAD MÁGICA-->
+      <div class="salones">
+        <h3>Ciudad Mágica</h3>
+        <div class="salon">
+          <div>
+            <img src="src/imagenes/ciudad-magica-1.jpg" alt="Ciudad Mágica" class="img-fluid rounded" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalCiudadMagica" />
+          </div>
+          <div>
+            <p><strong>Descripción:</strong> Salón para fiestas infantiles</p>
+            <p><strong>Dirección:</strong> Rondeau 971, Paraná - Entre Ríos</p>
+            <p><strong>Contacto:</strong> <a href="https://wa.me/543435224541" target="_blank">Whatsapp</a></p>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-dark mx-5 my-4" />
+      
+      <!--CARRUSEL CIUDAD MÁGICA, FALTA QUE LA FOTO NO SE ADAPTE AL TAMAÑO DEL CONTENEDOR,
+      QUE MANTENGA SU TAMAÑO ASI NO SE PIXELEA-->
+
+      <div class="modal fade" id="modalCiudadMagica" tabindex="-1" aria-labelledby="modalCiudadMagicaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalCiudadMagicaLabel">Ciudad Mágica</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div id="carouselCiudadMagica" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="src/imagenes/ciudad-magica-2.jpg" class="d-block w-100" alt="Ciudad Mágica 1">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/ciudad-magica-3.jpg" class="d-block w-100" alt="Ciudad Mágica 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/ciudad-magica-4.jpg" class="d-block w-100" alt="Ciudad Mágica 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselCiudadMagica" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselCiudadMagica" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--SALON BOB ESPONJA-->
+
+      <div class="salones">
+        <h3>Bob Esponja</h3>
+        <div class="salon">
+          <div>
+            <img src="src/imagenes/bob-esponja-1.jpg" alt="Bob Esponja" class="img-fluid rounded" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalBobEsponja" />
+          </div>
+          <div>
+            <p><strong>Descripción:</strong> Salón para fiestas infantiles</p>
+            <p><strong>Dirección:</strong> Gral. Gervasio Artigas 1225, Paraná - Entre Ríos</p>
+            <p><strong>Contacto:</strong> <a href="https://wa.me/543434531818" target="_blank">Whatsapp</a></p>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-dark mx-5 my-4" />
+
+
+      <!--CARRUSEL BOB ESPONJA, FALTA QUE LA FOTO NO SE ADAPTE AL TAMAÑO DEL CONTENEDOR,
+      QUE MANTENGA SU TAMAÑO ASI NO SE PIXELEA-->
+
+      <div class="modal fade" id="modalBobEsponja" tabindex="-1" aria-labelledby="modalBobEsponjaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalBobEsponjaLabel">Bob Esponja</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div id="carouselBobEsponja" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="src/imagenes/bob-esponja-2.jpg" class="d-block w-100" alt="Bob Esponja 1">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/bob-esponja-3.jpg" class="d-block w-100" alt="Bob Esponja 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/bob-esponja-4.jpg" class="d-block w-100" alt="Bob Esponja 2">
+            </div>
+            <div class="carousel-item">
+              <img src="src/imagenes/bob-esponja-5.jpg" class="d-block w-100" alt="Bob Esponja 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselBobEsponja" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselBobEsponja" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+  </main>
+
+
 
   <!--Footer-->
   <div id="footer"></div>
+
+
+  <script src="src/scripts/main.js" defer></script>
+  <script src="src/bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
-<script src="src/scripts/main.js" defer></script>
 
 </html>
