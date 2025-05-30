@@ -1,4 +1,3 @@
-
 /**
  * Estas funciones se encargan del manejo de los salones, como el listado,  la creación, edición y eliminación de los mismos.
  */
@@ -14,7 +13,7 @@ function listaSalones() {
     div.id = `salon-${index}`;
 
     div.innerHTML = generarVistaSalon(salon, index);
-    contenedor.appendChild(div);
+    contenedor.append(div);
   });
 }
 
@@ -52,7 +51,6 @@ function generarVistaSalon(salon, index) {
     `;
 }
 
-
 function mostrarFormularioEdicion(index) {
   const salones = JSON.parse(localStorage.getItem("salones")) || [];
   const salon = salones[index];
@@ -68,7 +66,7 @@ function mostrarFormularioEdicion(index) {
             <input type="text" class="form-control mb-2" name="titulo" value="${salon.titulo}" required />
             <textarea class="form-control mb-2" name="descripcion" required>${salon.descripcion}</textarea>
             <input type="text" class="form-control mb-2" name="direccion" value="${salon.direccion}" required />
-            <input type="text" class="form-control mb-2" name="whatsapp" value="${salon.whatsapp}" required />
+            <input type="tel" class="form-control mb-2" name="whatsapp" value="${salon.whatsapp}" required />
             <input type="text" class="form-control mb-2" name="imagen" value="${salon.imagen}" required />
   
             <div class="text-end mt-2">
@@ -85,27 +83,22 @@ function mostrarFormularioEdicion(index) {
  * Esta función se encarga de mostrar u ocultar el dropdown de los salones
  */
 
-
-const toggleButton = document.getElementById('toggle-salones');
-const dropdown = document.getElementById('salones-dropdown');
+const toggleButton = document.getElementById("toggle-salones");
+const dropdown = document.getElementById("salones-dropdown");
 let isVisible = true; // Variable para controlar la visibilidad del dropdown
 
-
-toggleButton.addEventListener('click', () => {
-  console.log("click")
+toggleButton.addEventListener("click", () => {
   if (isVisible) {
     isVisible = false; // Cambia el estado de visibilidad
-    toggleButton.textContent = 'más';
-    dropdown.className = 'invisible position-absolute top-0 start-50 translate-middle-x'; // vuelve al estilo original
+    toggleButton.textContent = "más";
+    dropdown.className =
+      "invisible position-absolute top-0 start-50 translate-middle-x"; // vuelve al estilo original
   } else {
     isVisible = true; // Cambia el estado de visibilidad
-    toggleButton.textContent = 'menos'; // Cambia el texto del botón
-    dropdown.className = 'visible'; // muestra el div
-
+    toggleButton.textContent = "menos"; // Cambia el texto del botón
+    dropdown.className = "visible"; // muestra el div
   }
 });
-
-
 
 function guardarEdicion(event, index) {
   event.preventDefault();
@@ -130,39 +123,35 @@ function cancelarEdicion(index) {
   contenedor.innerHTML = generarVistaSalon(salones[index], index);
 }
 
+const form = document.getElementById("salon-form");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("salon-form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  const titulo = document.getElementById("titulo").value;
+  const direccion = document.getElementById("direccion").value;
+  const whatsapp = document.getElementById("whatsapp").value;
+  const imagen = document.getElementById("imagen").value;
+  const descripcion = document.getElementById("descripcion").value;
 
-    const titulo = document.getElementById("titulo").value;
-    const direccion = document.getElementById("direccion").value;
-    const whatsapp = document.getElementById("whatsapp").value;
-    const imagen = document.getElementById("imagen").value;
-    const descripcion = document.getElementById("descripcion").value;
+  const nuevoSalon = {
+    id: Date.now(),
+    titulo,
+    direccion,
+    whatsapp,
+    imagen,
+    descripcion,
+  };
 
-    const nuevoSalon = {
-      id: Date.now(),
-      titulo,
-      direccion,
-      whatsapp,
-      imagen,
-      descripcion
-    };
+  const salones = JSON.parse(localStorage.getItem("salones")) || [];
 
-    const salones = JSON.parse(localStorage.getItem("salones")) || [];
+  salones.push(nuevoSalon);
+  localStorage.setItem("salones", JSON.stringify(salones));
 
-    salones.push(nuevoSalon);
-    localStorage.setItem("salones", JSON.stringify(salones));
+  alert("Salón guardado con éxito ✅");
 
-    alert("Salón guardado con éxito ✅");
-
-    form.reset();
-  });
+  form.reset();
 });
-
 
 /**
  * Esta función se encarga de cargar los salones en el contenedor correspondiente
@@ -178,6 +167,7 @@ function eliminarSalon(index) {
   }
 }
 
+// ESTA FUNCION NO SE ESTA USANDO
 function editarSalon(index) {
   const salones = JSON.parse(localStorage.getItem("salones")) || [];
   const salon = salones[index];
@@ -194,13 +184,11 @@ function editarSalon(index) {
       descripcion: nuevaDescripcion,
       direccion: nuevaDireccion,
       whatsapp: nuevoWhatsapp,
-      imagen: nuevaImagen
+      imagen: nuevaImagen,
     };
     localStorage.setItem("salones", JSON.stringify(salones));
     listaSalones(); // actualizar
   }
 }
 
-
-
-document.addEventListener("DOMContentLoaded", listaSalones);
+listaSalones();
