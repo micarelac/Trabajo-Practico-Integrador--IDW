@@ -1,80 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - IDW S.A.</title>
 
     <link rel="stylesheet" href="src/styles/estilos.css" />
-<link rel="stylesheet" href="src/bootstrap-5.0.2/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="src/bootstrap-5.0.2/dist/css/bootstrap.min.css"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!--Header-->
     <div id="header-placeholder"></div>
 
-
     <main>
-        <section id="dashboard-salones" class="container my-5">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="mb-4">Gestión de Salones</h2>
-                <button id="toggle-salones" class="btn btn-secondary mb-2">menos</button>
+      <section id="dashboard-salones" class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="mb-4">Gestión de Salones</h2>
+          <button id="toggle-salones" class="btn btn-secondary mb-2">
+            menos
+          </button>
+        </div>
+
+        <div id="salones-dropdown" class="visible">
+          <div id="salones-lista" class="row mt-4">
+            <!-- Cards generadas dinámicamente -->
+          </div>
+
+          <form id="salon-form">
+            <div class="row g-3">
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="titulo"
+                  placeholder="Título"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="direccion"
+                  placeholder="Dirección"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="whatsapp"
+                  placeholder="WhatsApp"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="imagen"
+                  placeholder="Ruta de imagen"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <textarea
+                  class="form-control"
+                  id="descripcion"
+                  placeholder="Descripción"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-primary">
+                  Guardar salón
+                </button>
+              </div>
             </div>
-            <div id="salones-dropdown" class="visible">
+            <input type="hidden" id="salon-id" />
+          </form>
+        </div>
+        <hr />
+      </section>
 
-                <div id="salones-lista" class="row mt-4">
-                    <!-- Cards generadas dinámicamente -->
-                </div>
+      <!-- <section id="servicios">
+        <h2>Gestion de servicios</h2>
+      </section>
 
-                <form id="salon-form">
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="titulo" placeholder="Título" required />
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="direccion" placeholder="Dirección" required />
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="whatsapp" placeholder="WhatsApp" required />
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="imagen" placeholder="Ruta de imagen" required />
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control" id="descripcion" placeholder="Descripción" rows="3"
-                                required></textarea>
-                        </div>
-                        <div class="col-12 text-end">
-                            <button type="submit" class="btn btn-primary">Guardar salón</button>
-                        </div>
-                    </div>
-                    <input type="hidden" id="salon-id" />
-                </form>
-            </div>
-            <hr />
-
-
-        </section>
-
-        <section id="servicios">
-            <h2>Gestion de servicios</h2>
-        </section>
-
-        <section id="presupuestos">
-            <h2>Gestion de presupuestos</h2>
-        </section>
-
+      <section id="presupuestos">
+        <h2>Gestion de presupuestos</h2>
+      </section> -->
     </main>
-
 
     <!--Footer-->
     <div id="footer"></div>
 
-    <script src="src/scripts/admin.js" defer></script>
-    <script src="src/scripts/main.js" defer></script>
-    <script src="src/bootstrap-5.0.2/dist/js/bootstrap.min.js" defer></script>
-</body>
-
+    <script src="src/scripts/main.js" type="module"></script>
+    <script src="src/scripts/admin.js"></script>
+    <script src="src/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
