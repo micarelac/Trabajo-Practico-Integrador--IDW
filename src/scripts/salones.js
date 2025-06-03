@@ -1,18 +1,49 @@
+function mostrarTablaSalones(salones) {
+  const contenedor = document.getElementById("catalogo-salones");
+  const tabla = document.createElement("table");
+  tabla.classList.add("table", "table-striped", "table-bordered", "mt-4");
+  tabla.innerHTML = `
+      <thead class="table-dark">
+          <tr>
+              <th>Título</th>
+              <th>Descripción</th>
+              <th>Dirección</th>
+              <th>Whatsapp</th>
+          </tr>
+      </thead>
+      <tbody>
+          ${salones
+            .map(
+              (salon) => `
+              <tr>
+                  <td>${salon.titulo}</td>
+                  <td>${salon.descripcion}</td>
+                  <td>${salon.direccion}</td>
+                  <td><a href="https://wa.me/${salon.whatsapp}" target="_blank">${salon.whatsapp}</a></td>
+              </tr>
+          `
+            )
+            .join("")}
+      </tbody>
+  `;
+  contenedor.append(tabla);
+}
+
 /* 
 Esta función se encarga de cargar los salones en el contenedor correspondiente
 y crear los elementos HTML necesarios para mostrarlos en la página
 */
 
 function cargarSalones() {
-    const contenedor = document.getElementById("catalogo-salones");
-    
-    const salones = JSON.parse(localStorage.getItem("salones")) || [];
+  const contenedor = document.getElementById("catalogo-salones");
 
-    salones.forEach(salon => {
-        const div = document.createElement("div");
-        div.classList.add("salones");
+  const salones = JSON.parse(localStorage.getItem("salones")) || [];
 
-        div.innerHTML = `
+  salones.forEach((salon) => {
+    const div = document.createElement("div");
+    div.classList.add("salones");
+
+    div.innerHTML = `
               <h3>${salon.titulo}</h3>
               <div class="salon">
                 <div>
@@ -26,8 +57,10 @@ function cargarSalones() {
               </div>
             `;
 
-        contenedor.append(div);
-    });
+    contenedor.append(div);
+  });
+
+  mostrarTablaSalones(salones);
 }
 
-cargarSalones()
+cargarSalones();
